@@ -3,13 +3,13 @@
 schema:
 - server/schema.graphql
 exec:
-  filename: server/graphql_gen.go
-  package: server
+  filename: generated/graphql.go
+  package: generated
 model:
   filename: models/graphql_gen.go
   package: models
 resolver:
-  filename: server/resolvers.go
-  package: server
+  filename: controllers/resolvers.go
+  package: controllers
   type: Resolver
 autobind: []

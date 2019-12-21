@@ -1,16 +1,17 @@
-package server
+package controllers
 
 import (
 	"context"
-	models "github.com/jterrazz/ccap.live-api/models"
+	"github.com/jterrazz/ccap.live-api/generated"
+	"github.com/jterrazz/ccap.live-api/models"
 )
 
 type Resolver struct{}
 
-func (r *Resolver) Mutation() MutationResolver {
+func (r *Resolver) Mutation() generated.MutationResolver {
 	return &mutationResolver{r}
 }
-func (r *Resolver) Query() QueryResolver {
+func (r *Resolver) Query() generated.QueryResolver {
 	return &queryResolver{r}
 }
 

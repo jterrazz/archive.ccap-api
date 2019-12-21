@@ -3,10 +3,12 @@ package server
 import (
 	"github.com/99designs/gqlgen/handler"
 	"github.com/gin-gonic/gin"
+	"github.com/jterrazz/ccap.live-api/controllers"
+	"github.com/jterrazz/ccap.live-api/generated"
 )
 
 func GraphqlHandler() gin.HandlerFunc {
-	h := handler.GraphQL(NewExecutableSchema(Config{Resolvers: &Resolver{}}))
+	h := handler.GraphQL(generated.NewExecutableSchema(generated.Config{Resolvers: &controllers.Resolver{}}))
 
 	return func(c *gin.Context) {
 		h.ServeHTTP(c.Writer, c.Request)
