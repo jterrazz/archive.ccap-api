@@ -1,4 +1,4 @@
 # Server configurations
 server:
-  host: "localhost"
+  host: ""
   port: 8080

@@ -1,7 +1,4 @@
-# .gqlgen.yml example
-#
 # Refer to https://gqlgen.com/config/
-# for detailed .gqlgen.yml documentation.
 
 schema:
 - server/schema.graphql
