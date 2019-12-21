@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="0937108a-62f4-4f31-8c0a-050326647a37" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gqlgen.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gqlgen.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/graphql.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/graphql.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/graphql_gen.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/resolvers.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/resolvers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/resolvers.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/resolvers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated/graphql.go" beforeDir="false" afterPath="$PROJECT_DIR$/generated/graphql.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/graphql_gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/graphql_gen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/server/schema.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/blocktap.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/blocktap.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,5 +94,9 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="461" y="239" key="SettingsEditor/0.0.1920.1200@0.0.1920.1200" timestamp="1576794164801" />
+    <state x="625" y="262" width="670" height="676" key="search.everywhere.popup" timestamp="1576953361858">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="625" y="262" width="670" height="676" key="search.everywhere.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1576953361858" />
   </component>
 </project>

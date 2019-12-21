@@ -1,5 +1,8 @@
 # ccap.live-api
 
+## Encryption process
+Password => PBKDF2 with salt saved on server => AES encryption
+
 ## Dev
 For ease of use, docker is used to dev with hot reloading
 

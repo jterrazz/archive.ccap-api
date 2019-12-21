@@ -1,13 +1,29 @@
-type User {
+type Payload {
+  data: String!
+  salt: String!
+}
+
+type Account {
   id: ID!
   email: String!
-  payload: String!
+  emailToken: String! # Is saved in the payload data so that a logged user can auth its email
+  payload: Payload!
+}
+
+type Asset {
+  name: String!
+#  symbol: String!
+#  priceUSD: Int!
 }
 
 type Query {
-  users: [User!]!
+  account(email: String!): Account!
+  assets: [Asset!]!
 }
 
 type Mutation {
-  createUser(email: String!): Boolean!
+  # registerEmail
+  createAccount(email: String!): Boolean!
+  updateAccount(email: String!, token: String!, payload: String!): Boolean!
+  # updateToken # Cannot ask for two password, but I can use email authentication if something bad happens with the token
 }
