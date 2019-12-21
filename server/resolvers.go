@@ -16,12 +16,13 @@ func (r *Resolver) Query() QueryResolver {
 
 type mutationResolver struct{ *Resolver }
 
-func (r *mutationResolver) CreateTodo(ctx context.Context, input models.NewTodo) (*models.Todo, error) {
-	panic("not implemented")
+func (r *mutationResolver) CreateUser(ctx context.Context, email string) (bool, error) {
+	return true, nil
 }
 
 type queryResolver struct{ *Resolver }
 
-func (r *queryResolver) Todos(ctx context.Context) ([]*models.Todo, error) {
-	panic("not implemented")
+func (r *queryResolver) Users(ctx context.Context) ([]*models.User, error) {
+	users := []*models.User{&models.User{Email: "emmm", ID: "42", Payload: "OK"}}
+	return users, nil
 }
