@@ -7,7 +7,7 @@ import (
 	"golang.org/x/oauth2"
 )
 
-const BASE_URL = "https://api.blocktap.io/server"
+const BASE_URL = "https://api.blocktap.io/graphql"
 
 var src = oauth2.StaticTokenSource(
 	&oauth2.Token{
@@ -18,22 +18,18 @@ var src = oauth2.StaticTokenSource(
 var httpClient = oauth2.NewClient(context.Background(), src)
 var client = graphql.NewClient(BASE_URL, httpClient)
 
-
-
-
-
-type BlocktapAsset struct {
-	Name string `graphql:"assetName"`
+type BTAsset = struct {
+	AssetName string
 }
 
-func GetAssets() []*BlocktapAsset {
+func GetAssets() []*BTAsset {
 	var query struct {
-		Assets []*BlocktapAsset `graphql:"assets(sort: [{ marketCapRank: ASC }]"`
+		Assets []*BTAsset `graphql:"assets(sort: [{ marketCapRank: ASC }])"`
 	}
 
 	err := client.Query(context.Background(), &query, nil)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("kkkk")
 	}
 	return query.Assets
 }
