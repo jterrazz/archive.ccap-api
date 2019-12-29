@@ -10,14 +10,17 @@ func BTAssetsToAssets(original []*services.BTAsset) []*models.Asset {
 	var assets []*models.Asset
 
 	for _, b := range original {
-		newFoo := models.Asset{Name: b.AssetName}
-		assets = append(assets, &newFoo)
+		newAsset := models.Asset{Name: b.AssetName, }
+		assets = append(assets, &newAsset)
 	}
 
 	return assets
 }
 
 func (r *queryResolver) Assets (ctx context.Context) ([]*models.Asset, error) {
-	assets := services.GetAssets()
+	assets, err := services.GetAssets()
+	if err != nil {
+		return nil, err
+	}
 	return BTAssetsToAssets(assets), nil
 }

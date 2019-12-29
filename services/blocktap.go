@@ -2,7 +2,6 @@ package services
 
 import (
 	"context"
-	"fmt"
 	"github.com/shurcooL/graphql"
 	"golang.org/x/oauth2"
 )
@@ -22,14 +21,14 @@ type BTAsset = struct {
 	AssetName string
 }
 
-func GetAssets() []*BTAsset {
+func GetAssets() ([]*BTAsset, error) {
 	var query struct {
 		Assets []*BTAsset `graphql:"assets(sort: [{ marketCapRank: ASC }])"`
 	}
 
 	err := client.Query(context.Background(), &query, nil)
 	if err != nil {
-		fmt.Println("kkkk")
+		return nil, err
 	}
-	return query.Assets
+	return query.Assets, nil
 }
